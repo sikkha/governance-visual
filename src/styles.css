@@ -1,0 +1,46 @@
+/* styles.css */
+
+.visualization-container {
+  position: relative;
+  width: 256px; /* Adjusted to match the w-64 in Tailwind CSS */
+  height: 256px; /* Adjusted to match the h-64 in Tailwind CSS */
+  margin: 2rem auto;
+  background-color: #f7fafc; /* Tailwind's bg-gray-100 equivalent */
+  border: 1px solid #cbd5e0; /* Tailwind's border-gray-300 equivalent */
+}
+
+.dot {
+  position: absolute;
+  width: 8px; /* Adjusted to match w-2 in Tailwind CSS */
+  height: 8px; /* Adjusted to match h-2 in Tailwind CSS */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.dot-red {
+  background-color: #f56565; /* Tailwind's bg-red-500 equivalent */
+}
+
+.dot-blue {
+  background-color: #4299e1; /* Tailwind's bg-blue-500 equivalent */
+}
+
+.dot-green {
+  background-color: #48bb78; /* Tailwind's bg-green-500 equivalent */
+}
+
+.triangle {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #cbd5e0; /* Tailwind's border-gray-300 equivalent */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+@media (max-width: 768px) {
+  .visualization-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
